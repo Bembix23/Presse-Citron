@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./dist/tailwind.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <title>Exercice Presse-Citron</title>
+  <!-- Fait par Mehdi Ezzahi et Jules Dupuis -->
+</head>
+
+<body class="font-sans">
+  <header class="lg:fixed lg:top-0 lg:w-full bg-green-600">
+    <nav class="flex justify-between container mx-auto items-center py-4 lg:pr-16">
+      <img
+        src="https://www.presse-citron.net/app/themes/keleops-child/images/presse-citron-nav.svg"
+        alt="" class="lg:h-8 h-4 ml-2">
+      <ul class="flex lg:space-x-6 font-medium text-base">
+        <li class="relative">
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">TESTS
+          </a>
+        </li>
+        <li x-data="{ isOpen:false, timeOut:null}" @mouseleave="timeOut = setTimeout(function() { isOpen=false }, 150)"
+          @mouseenter="isOpen=true; clearTimeout(timeOut)" class="relative">
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">SMARTPHONES
+          </a>
+          <ul x-show="isOpen" class="absolute top-0 mt-14 bg-white p-5 rounded-lg space-y-5 text-sm text-green-500 max-w-xl"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90">
+            <li>
+              <a href="">Forfaits mobile</a>
+            </li>
+            <li>
+              <a href="">Guides d'achat</a>
+            </li>
+            <li>
+              <a href="">Apple</a>
+            </li>
+            <li>
+              <a href="">Google</a>
+            </li>
+            <li>
+              <a href="">Huawei</a>
+            </li>
+            <li>
+              <a href="">OnePlus</a>
+            </li>
+            <li>
+              <a href="">Oppo</a>
+            </li>
+            <li>
+              <a href="">Samsung</a>
+            </li>
+            <li>
+              <a href="">Xiaomi</a>
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ isOpen:false, timeOut:null}" @mouseleave="timeOut = setTimeout(function() { isOpen=false }, 150)"
+          @mouseenter="isOpen=true; clearTimeout(timeOut)" class="relative">
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">FINTECH</a>
+          <ul x-show="isOpen" class="absolute top-0 mt-14 bg-white p-5 rounded-lg space-y-5 text-sm text-green-500 w-36"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90">
+            <li>
+              <a href="">Banque en ligne</a>
+            </li>
+            <li>
+              <a href="">Cryptos</a>
+            </li>
+          </ul>
+        </li>
+        <li class="relative">
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">STARTUPS</a>
+        </li>
+        <li>
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">AUTO</a>
+        </li>
+        <li x-data="{ isOpen:false, timeOut:null}" @mouseleave="timeOut = setTimeout(function() { isOpen=false }, 150)"
+          @mouseenter="isOpen=true; clearTimeout(timeOut)" class="relative">
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">JEUX VIDEO</a>
+          <ul x-show="isOpen" class="absolute top-0 mt-14 bg-white p-5 rounded-lg space-y-5 text-sm text-green-500 w-36"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90">
+            <li>
+              <a href="">Où acheter la PS5</a>
+            </li>
+            <li>
+              <a href="">Où acheter la Xbox</a>
+            </li>
+            <li>
+              <a href="">Actualités</a>
+            </li>
+            <li>
+              <a href="">PS5</a>
+            </li>
+            <li>
+              <a href="">PS5 Digital Edition</a>
+            </li>
+            <li>
+              <a href="">Xbox Series X</a>
+            </li>
+            <li>
+              <a href="">Xbox Series S</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">BONS PLANS</a>
+        </li>
+        <li x-data="{ isOpen:false, timeOut:null}" @mouseleave="timeOut = setTimeout(function() { isOpen=false }, 150)"
+          @mouseenter="isOpen=true; clearTimeout(timeOut)" class="relative">
+          <a href=""
+            class="hidden lg:inline text-white transition-colors hover:text-green-500 hover:bg-white hover:rounded-lg p-3 hover:bg-opacity-80">SERIES</a>
+          <ul x-show="isOpen" class="absolute top-0 mt-14 bg-white p-5 rounded-lg space-y-5 text-sm text-green-500 w-36"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90">
+            <li>
+              <a href="">Streaming</a>
+            </li>
+            <li>
+              <a href="">Disney+</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href=""
+            class="text-white text-xl bg-green-500 rounded-lg p-3 transition-shadow hover:shadow-lg pr-16 mr-4 lg:pr-24 lg:ml-10">Recherche</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="lg:mt-24 lg:ml-32 ml-3">
+      <div class="flex flex-wrap lg:flex-nowrap">
+        <div class="w-full flex items-center">
+          <div class="border-green-500 border-8 flex flex-row rounded-xl">
+            <img
+              src="https://www.presse-citron.net/app/uploads/2021/06/test-vivo-x60-pro-560x600.jpg"
+              alt="" class="h-48 w-48">
+          </div>
+          <div class="max-w-4xl items-start space-y-9 text-left p-9 flex flex-row flex-wrap ml-4 pt-24">
+            <h2 class="text-6xl text-green-500 font-bold ">Test Vivo X60 Pro: l'équilibre instable</h2>
+            <p class="text-lg max-w-96 text-green-500">Après un X51 5G séduisant, Vivo revient avec le X60 Pro, son nouveau smartphone haut de gamme. Vendu 800 euros...</p>
+            <a href=""
+              class="flex text-white text-center bg-green-500 rounded-lg opacity-70 transition-opacity hover:opacity-100 p-3 mt-3">Lire l'article</a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex items-center">
+        <div class="lg:border-green-500 lg:border-8 flex flex-row lg:rounded-xl">
+          <img
+            src="https://www.presse-citron.net/app/uploads/2021/06/anonymous-elon-musk.jpg"
+            alt="" class="hidden lg:visible lg:h-24 lg:w-32">
+        </div>
+        <div class="max-w-4xl items-start space-y-9 text-left p-9 flex flex-row flex-wrap ml-4 pt-24">
+          <h2 class="text-2xl lg:text-3xl text-green-500 font-semibold ">Bitcoin : les Anonymous s’en prennent violemment à Elon Musk</h2>
+          <a href=""
+            class="flex text-white text-center bg-green-500 rounded-lg opacity-70 transition-opacity hover:opacity-100 p-3 mt-3">Lire l'article</a>
+        </div>
+      </div>
+      <div class="w-full flex items-center">
+        <div class="lg:border-green-500 lg:border-8 flex flex-row lg:rounded-xl">
+          <img
+            src="https://www.presse-citron.net/app/uploads/2021/06/Tesla-Plaid-Evenement.jpg"
+            alt="" class="hidden lg:visible lg:h-24 lg:w-32">
+        </div>
+        <div class="max-w-4xl items-start space-y-9 text-left p-9 flex flex-row flex-wrap ml-4 pt-24">
+          <h2 class="text-2xl text-green-500 font-semibold ">Tesla Model S Plaid Event : du retard, des secondes et un jeu d’esquive</h2>
+          <a href=""
+            class="flex text-white text-center bg-green-500 rounded-lg opacity-70 transition-opacity hover:opacity-100 p-3 mt-3">Lire l'article</a>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white pl-6">
+      <h2 class="text-6xl text-black font-semibold pt-12 pb-9 text-center">Dernières actualités</h2>
+      <div class="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 pb-9 gap-8 justify-items-center">
+        <div class="">
+          <img class="h-32 w-46 border-green-500 border-8 rounded-xl"
+            src="https://www.presse-citron.net/app/uploads/2021/05/hacker.jpg"
+            alt="">
+          <a href="" class="text-4xl text-black font-medium hover:text-green-500">Ce système trompe les hackers pour mieux les contrer</a>
+          <p>Il s’agit d’une méthode originale qui pourrait intéresser le secteur public comme le privé.</p>
+        </div>
+        <div class="">
+          <img class="h-32 w-46 border-green-500 border-8 rounded-xl"
+            src="https://www.presse-citron.net/app/uploads/2021/06/oneplus-interview-tuomas.jpg"
+            alt="">
+          <a href="" class="text-4xl text-black font-medium hover:text-green-500">Comment OnePlus veut reconquérir l’Europe (Interview)</a>
+          <p>Alors que la sortie du OnePlus Nord CE approche, nous avons pu nous entretenir avec Tuomas Lampen, Directeur de la Stratégie Europe de OnePlus. L’occasion de revenir sur les récents changements de l’entreprise et ses plans de reconquête sur le Vieux Continent.</p>
+        </div>
+        <div class="">
+          <img class="h-32 w-46 border-green-500 border-8 rounded-xl"
+            src="https://www.presse-citron.net/app/uploads/2021/06/pexels-mart-production-7330910.jpg"
+            alt="">
+          <a href="" class="text-4xl text-black font-medium hover:text-green-500">Quand les jeux vidéo viennent au secours de la santé des seniors</a>
+          <p>Une étude mené en Australie tend à le prouver.</p>
+        </div>
+        <div class="">
+          <img class="h-32 w-46 border-green-500 border-8 rounded-xl"
+            src="https://www.presse-citron.net/app/uploads/2020/06/twitter-app.jpg"
+            alt="">
+          <a href="" class="text-4xl text-black font-medium hover:text-green-500">Sur Twitter, 20 % des tendances seraient crées par des bots</a>
+          <p>Une nouvelle étude laisse entrevoir l’étendue de ce phénomène.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-black flex flex-row pt-12 pb-12">
+
+    <div class="flex flex-row container justify-center space-x-8">
+      <a href=""><img class="rounded-full h-12" src="https://cdns.iconmonstr.com/wp-content/assets/preview/2017/240/iconmonstr-facebook-6.png" alt=""></a>
+      <a href=""><img class="rounded-full h-12" src="https://icon-library.com/images/twitter-icon-svg/twitter-icon-svg-28.jpg" alt=""></a>
+      <a href=""><img class="rounded-full h-12" src="https://cdn.iconscout.com/icon/free/png-256/instagram-1946323-1646407.png" alt=""></a>
+      <a href=""><img class="rounded-full h-12" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWfZExlVFvAj9iBgsqLiqVl97pnBnD-NVmJg&usqp=CAU" alt=""></a>
+      <a href=""><img class="rounded-full h-12" src="https://image.shutterstock.com/image-vector/linkedin-american-business-icon-logo-260nw-1949832274.jpg" alt=""></a>
+    </div>
+
+  </footer>
+
+  <!-- ... -->
+</body>
+
+</html>

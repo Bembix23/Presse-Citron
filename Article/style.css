@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+
+.navbar {
+    background-color: green;
+    font-family: sans-serif;
+    height: 15%;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+@media (min-width: 1300px) {
+  .searchbar {
+    width: 15%;
+  }
+}
+
+.articleimg {
+  width: 15em;
+  max-width: 12em;
+  height: auto;
+  max-height: 10em;
+  border-radius: 25px;
+}
+
+.lien {
+  text-decoration: underline #2cbe7f75;
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.img1 {
+  width: 50em;
+  max-width: 50em;
+  height: auto;
+  max-height: 40em;
+}
+.autheur {
+  font-size: 14px;
+  color: grey;
+  font-weight: bold;
+}
+
+.date, .text2 {
+  font-size: 14px;
+  color: grey;
+}
+
+.title {
+  font-size: 27px;
+  font-weight: 900;
+  font-family: 'oswald', sans-serif;
+}
+
+.article {
+  font-size: 18px;
+}
+
+.newsletter {
+  background-color: #2cbe7f75;
+  border-radius: 30px;
+}
+
+.button-search {
+  background-color: #2cbe7f75;
+}
